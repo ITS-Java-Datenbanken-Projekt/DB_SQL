@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 17. Mai 2024 um 09:18
+-- Erstellungszeit: 21. Jun 2024 um 18:35
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -56,11 +56,17 @@ CREATE TABLE `notiz` (
 --
 
 CREATE TABLE `user` (
-  `Anzeigename` text NOT NULL,
-  `U_ID` int(11) NOT NULL,
   `Benutzername` text NOT NULL,
-  `Password` text NOT NULL
+  `Password` text NOT NULL,
+  `Anzeigename` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Daten für Tabelle `user`
+--
+
+INSERT INTO `user` (`Benutzername`, `Password`, `Anzeigename`) VALUES
+('test', '123', 'test user');
 
 --
 -- Indizes der exportierten Tabellen
@@ -79,12 +85,6 @@ ALTER TABLE `notiz`
   ADD PRIMARY KEY (`N_ID`);
 
 --
--- Indizes für die Tabelle `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`U_ID`);
-
---
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
@@ -99,12 +99,6 @@ ALTER TABLE `kategorie`
 --
 ALTER TABLE `notiz`
   MODIFY `N_ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT für Tabelle `user`
---
-ALTER TABLE `user`
-  MODIFY `U_ID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
