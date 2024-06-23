@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jun 23, 2024 at 05:28 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: 127.0.0.1
+-- Erstellungszeit: 23. Jun 2024 um 18:19
+-- Server-Version: 10.4.32-MariaDB
+-- PHP-Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `notizapp`
+-- Datenbank: `notizapp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `notiz`
+-- Tabellenstruktur für Tabelle `notiz`
 --
 
 CREATE TABLE `notiz` (
@@ -38,7 +38,7 @@ CREATE TABLE `notiz` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `notiz`
+-- Daten für Tabelle `notiz`
 --
 
 INSERT INTO `notiz` (`Titel`, `Notiz_ID`, `Erstelldatum`, `Änderungsdatum`, `Zugriff`, `Inhalt`, `Ordner_ID`) VALUES
@@ -51,27 +51,27 @@ INSERT INTO `notiz` (`Titel`, `Notiz_ID`, `Erstelldatum`, `Änderungsdatum`, `Zu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Ordner`
+-- Tabellenstruktur für Tabelle `ordner`
 --
 
-CREATE TABLE `Ordner` (
+CREATE TABLE `ordner` (
   `Ordner_ID` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Benutzername` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `Ordner`
+-- Daten für Tabelle `ordner`
 --
 
-INSERT INTO `Ordner` (`Ordner_ID`, `Name`, `Benutzername`) VALUES
+INSERT INTO `ordner` (`Ordner_ID`, `Name`, `Benutzername`) VALUES
 (1, 'test', 'Jumak'),
 (2, 'test2', 'Julius');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Tabellenstruktur für Tabelle `user`
 --
 
 CREATE TABLE `user` (
@@ -81,7 +81,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user`
+-- Daten für Tabelle `user`
 --
 
 INSERT INTO `user` (`Benutzername`, `Password`, `Anzeigename`) VALUES
@@ -89,35 +89,35 @@ INSERT INTO `user` (`Benutzername`, `Password`, `Anzeigename`) VALUES
 ('Jumak', 'passwort123', 'Julius');
 
 --
--- Indexes for dumped tables
+-- Indizes der exportierten Tabellen
 --
 
 --
--- Indexes for table `notiz`
+-- Indizes für die Tabelle `notiz`
 --
 ALTER TABLE `notiz`
   ADD PRIMARY KEY (`Notiz_ID`);
 
 --
--- Indexes for table `Ordner`
+-- Indizes für die Tabelle `ordner`
 --
-ALTER TABLE `Ordner`
+ALTER TABLE `ordner`
   ADD PRIMARY KEY (`Ordner_ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT für exportierte Tabellen
 --
 
 --
--- AUTO_INCREMENT for table `notiz`
+-- AUTO_INCREMENT für Tabelle `notiz`
 --
 ALTER TABLE `notiz`
   MODIFY `Notiz_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `Ordner`
+-- AUTO_INCREMENT für Tabelle `ordner`
 --
-ALTER TABLE `Ordner`
+ALTER TABLE `ordner`
   MODIFY `Ordner_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
