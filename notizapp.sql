@@ -66,30 +66,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Benutzername`, `Password`, `Anzeigename`) VALUES
-('test', '123', 'test user'),
-('moritz', '12345678a', 'moritz'),
-('moritz1', 'oma334357', 'moritz'),
-('moritz123', 'oma334357', 'm'),
-('moritz1234', 'oma334357', 'm'),
-('abc', 'oma334357', 'm'),
-('abc2', 'oma334357', 'm'),
-('fadfasd', 'asdfg123', 'dasdasd'),
-('adc', 'adc12345678', 'adas'),
-('asdasd', 'asdasdasd1', 'dasdas'),
-('asdasdasd', 'asdasdasdasd1', 'asdas'),
-('asdasdasdasd', 'asdasdasd2', 'asd'),
-('asdasdasdasda', 'asdasdasd2', 'asdasd'),
-('asdasdasdasdasdasdasd', 'asdasdasd1', 'asdasd'),
-('dsadztefgsd', 'sdadfasd1', 'dsadasdas'),
-('sdahrwtz', 'sdadfasd1', 'ewq'),
-('eqhr3', 'sdadfasd1', 'ewq'),
-('eqrkjrzt', 'sdadfasd1', '123'),
-('rqer', 'sdadfasd1', 'qrada'),
-('dwqewqe', '1PCreateAccountUser.setIconImage(new ImageIcon(getClass().getResource(\"/notiz/app/test/source/icon.png\")).getImage());', 'wqe'),
-('dwqewqew', '1dsaPCreateAccountUser.setIconImage(new ImageIcon(getClass().getResource(\"/notiz/app/test/source/icon.png\")).getImage());', 'wqe'),
-('fjdasdnjfjidshb1233', 'fjdasdnjfjidshb1233', 'fjdasdnjfjidshb1233'),
-('mirko', 'fsdfnjsdj123', 'mirko'),
-('julius', 'dfhusdfhuh12', 'julius');
+('test', '123', 'test user');
 
 --
 -- Indizes der exportierten Tabellen
