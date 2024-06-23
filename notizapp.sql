@@ -40,13 +40,12 @@ CREATE TABLE `kategorie` (
 
 CREATE TABLE `notiz` (
   `Titel` text NOT NULL,
-  `N_ID` int(11) NOT NULL,
-  `Erstelldatum` datetime NOT NULL,
-  `Änderungsdatum` datetime NOT NULL,
-  `User_ID` int(11) NOT NULL,
+  `Notiz_ID` int(11) NOT NULL,
+  `Erstelldatum` datetime NOT NULL DEFAULT current_timestamp(),
+  `Änderungsdatum` datetime NOT NULL DEFAULT current_timestamp(),
   `Zugriff` enum('Read','Write','No Acces') NOT NULL,
-  `Inhalt` int(11) NOT NULL,
-  `K_ID` int(11) NOT NULL
+  `Inhalt` text NOT NULL,
+  `Ordner_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -100,11 +99,18 @@ ALTER TABLE `notiz`
 ALTER TABLE `kategorie`
   MODIFY `K_ID` int(11) NOT NULL AUTO_INCREMENT;
 
+ALTER TABLE `notiz`
+  ADD PRIMARY KEY (`Notiz_ID`);
+
 --
--- AUTO_INCREMENT für Tabelle `notiz`
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `notiz`
 --
 ALTER TABLE `notiz`
-  MODIFY `N_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Notiz_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
