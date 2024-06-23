@@ -84,12 +84,6 @@ ALTER TABLE `kategorie`
   ADD PRIMARY KEY (`K_ID`);
 
 --
--- Indizes für die Tabelle `notiz`
---
-ALTER TABLE `notiz`
-  ADD PRIMARY KEY (`N_ID`);
-
---
 -- AUTO_INCREMENT für exportierte Tabellen
 --
 
