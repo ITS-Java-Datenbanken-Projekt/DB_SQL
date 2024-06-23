@@ -68,6 +68,12 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`Benutzername`, `Password`, `Anzeigename`) VALUES
 ('test', '123', 'test user');
 
+INSERT INTO `notiz` (`Titel`, `Notiz_ID`, `Erstelldatum`, `Änderungsdatum`, `Zugriff`, `Inhalt`, `Ordner_ID`) VALUES
+('testnotiz', 1, '2024-06-23 14:23:29', '2024-06-23 14:23:29', 'Read', 'ganz viel Inhalt', 1),
+('testnotiz2', 2, '2024-06-23 14:50:07', '2024-06-23 14:50:07', 'Read', 'noch mehr Inhalt', 1),
+('notiz zu Ordner1', 3, '2024-06-23 14:59:09', '2024-06-23 14:59:09', 'Read', 'mit Ihalt', 1),
+('notiz zu Ordner2', 4, '2024-06-23 14:59:29', '2024-06-23 14:59:29', 'Read', 'auch mit Ihalt', 2);
+
 --
 -- Indizes der exportierten Tabellen
 --
